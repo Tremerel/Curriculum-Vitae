@@ -1,0 +1,366 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: lightblue;
+    min-height: 100vh;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    position:relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 50px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,0.5);
+}
+
+
+/* Left Side CSS */
+
+.container .left-side{
+    position: relative;
+    background: #003147;
+    padding: 40px;
+}
+
+/* profil */
+
+.profil-text{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.profil-text .img-box{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profil-text .img-box img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profil-text h2{
+    color: #fff;
+    font-family: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.profil-text h2 span {
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+/* contact */
+
+.contact-info{
+    padding-top: 40px;
+}
+.title{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    position: relative;
+}
+.contact-info ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.contact-info ul li .icon {
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #03a9f4;
+}
+.contact-info ul li .text {
+    color: #fff;
+    font-weight: 300;
+}
+.contact-info.education li {
+    margin-bottom: 15px;
+}
+.contact-info.education h5 {
+    color: #03a9f4;
+    font-weight: 600;
+}
+.contact-info.education h4:nth-child(2) {
+    color: #fff;
+    font-weight: 500;
+}
+.contact-info.education h4 {
+    color: #fff;
+    font-weight: 300;
+}
+
+/* Languages */
+
+.contact-info.language .percent{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #5c5c5c;
+    display: block;
+    margin-top: 5px;
+}
+.contact-info.language .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+
+
+
+
+
+/* Right Side CSS */
+
+.container .right-side{
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+
+
+
+.about {
+    margin-bottom: 50px;
+}
+.about:last-child{
+    margin-bottom: 0;
+}
+.title2{
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+p{
+    color: #333;
+}
+
+.about .box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.about .box .year-company {
+    min-width: 150px;
+}
+.about .box .year-company h5{
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+.about .box .text{
+    width: 100%;
+}
+
+.about .box .text h4{
+    text-transform: uppercase;
+    color: #2a7da2;
+    font-size: 16px;
+}
+
+.about .box .btn {
+    cursor: pointer;
+    max-width: 100px;
+    height: 100%;
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2a7da2;
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.about .box .btn i {
+    margin-right: 4px;
+}
+
+.skills .box {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.skills .box h4 {
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 500;
+}
+.skills .box .percent {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #f0f0f0;
+}
+.skills .box .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+
+.interest ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.interest ul li {
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.interest ul li i {
+    color: #03a9f4;
+    font-size: 18px;
+    width: 20px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width:1000px) {
+    .container{
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .interest ul {
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+}
+@media screen and (max-width:700px) {
+
+    .about .box{
+        flex-direction: column;
+    }
+    .about .box .year-company {
+        margin-bottom: 5px;
+    }
+    .skills .box {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media screen and (max-width:500px) {
+    .interest ul {
+        grid-template-columns: repeat(1,1fr);
+    }
+    
+}
+
+/* Modal CSS */
+
+
+   
+.preview{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.8);
+    max-width: 1000px;
+    width: 90%;
+    max-height: 90vh;
+    background: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s; 
+    display: none;
+}
+.preview.show{
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;
+}
+
+.preview .details{
+    color: #333;
+    font-size: 18px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.preview .details .title3{
+    color: #333;
+    font-weight: 400;
+}
+
+.preview .details .icon{
+    cursor: pointer;
+    font-size: 22px;
+}
+.preview .details .icon:hover{
+    cursor: pointer;
+    font-size: 22px;
+    text-shadow:  0px 0px 10px  rgba(0, 0, 0, 0.8);
+}
+.preview div {
+    width: 100%;
+    padding: 10px;
+}
+.preview div object {
+    width: 100%;
+    height: 79vh;
+}
+.shadow{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0);
+    width: 100vw;
+    height: 100vh;
+    background: #2c2c2c80;
+    display: none;
+    transition: 0.5s;
+}
+.shadow.show{
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
