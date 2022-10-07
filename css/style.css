@@ -30,7 +30,7 @@ section{
     width: 100%;
     max-width: 1000px;
     min-height: 1000px;
-    margin: 50px;
+    /* margin: 50px; */
     background: #fff;
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -234,6 +234,7 @@ p{
     align-items: center;
     background: #2a7da2;
     color: #fff;
+    text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
     float: right;
@@ -241,6 +242,7 @@ p{
 .about .box .text .btn i {
     margin-right: 4px;
 }
+
 
 .skills .box {
     position: relative;
@@ -284,6 +286,14 @@ p{
     font-size: 18px;
     width: 20px;
     margin-right: 10px;
+}
+
+@media screen and (min-width:1000px) {
+    .bibox{
+        display: flex;
+        gap: 20px;
+    }
+    
 }
 
 @media screen and (max-width:1000px) {
